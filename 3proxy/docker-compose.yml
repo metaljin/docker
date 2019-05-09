@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  3proxy:
+    restart: always
+    image: 3proxy:0.8
+    container_name: 3proxy
+    ports:
+      - "3128:3128/tcp"
+      - "1080:1080"
+      - "8080:8080"
+    volumes:
+      - ./3proxy:/etc/3proxy/
+    environment:
+      - PROXY_LOGIN=proxy
+      - PROXY_PASSWORD=proxy2019 
