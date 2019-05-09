@@ -1,0 +1,10 @@
+version: '3'
+services:
+  svn:
+    image: svn:1.10.4
+    container_name: svn
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./data:/svn
+
